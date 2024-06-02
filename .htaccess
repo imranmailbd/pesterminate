@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/ [L]
+RewriteCond %{HTTP_HOST} ^www.pesterminate.ca
+RewriteRule (.*) https://pesterminate.ca/$1 [R=301,L]
+#php_value post_max_size 99M
+#php_value upload_max_filesize 99M
+# php -- BEGIN cPanel-generated handler, do not edit
+# This domain inherits the “PHP” package.
+# php -- END cPanel-generated handler, do not edit
